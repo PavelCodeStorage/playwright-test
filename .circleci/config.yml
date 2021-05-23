@@ -1,9 +1,12 @@
 version: 2.1
 
+executors:
+  default-executor:
+    working_directory: ~/repo
+
 jobs:
   build:
     executor: default-executor
-    working_directory: ~/repo
 
     steps:
     
