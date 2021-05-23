@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   build:
-  docker:
+    docker:
     - image: pdovwork/seavus_code_talks:latest
     working_directory: ~/repo
 
