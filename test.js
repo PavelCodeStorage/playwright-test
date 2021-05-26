@@ -1,6 +1,6 @@
 const assert = require('assert');
 describe('Simple Math Test', () => {
- it('should return 8', () => {
-        assert.equal(4 + 4, 8);
+ it('should return 9', () => {
+        assert.equal(5 + 4, 9);
     });
 });
