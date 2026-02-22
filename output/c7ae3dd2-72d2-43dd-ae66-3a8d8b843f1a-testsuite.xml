@@ -1,0 +1,110 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1615961195007' stop='1615961219064'>
+    <name>User registration @Smoke</name>
+    <title>User registration @Smoke</title>
+    <test-cases>
+        <test-case start='1615961204330' status='failed' stop='1615961218700'>
+            <name>Ordinary registration</name>
+            <title>Ordinary registration</title>
+            <labels>
+                <label name='tag' value='@Smoke'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1615961204349' status='passed' stop='1615961212460'>
+                    <name>Given I on the main page </name>
+                    <title>Given I on the main page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1615961204350' status='passed' stop='1615961207232'>
+                            <name>I am on page "ru"</name>
+                            <title>I am on page "ru"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1615961207233' status='passed' stop='1615961212237'>
+                            <name>I wait 5</name>
+                            <title>I wait 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1615961212237' status='passed' stop='1615961212459'>
+                            <name>I click {"id":"adroll_allow_all"}</name>
+                            <title>I click {"id":"adroll_allow_all"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1615961212460' status='passed' stop='1615961217760'>
+                    <name>When I click on the sign up button </name>
+                    <title>When I click on the sign up button </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1615961212460' status='passed' stop='1615961212481'>
+                            <name>I wait for element {"xpath":"//button[@data-type=\"page_header\"]"}</name>
+                            <title>I wait for element {"xpath":"//button[@data-type=\"page_header\"]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1615961212481' status='passed' stop='1615961212752'>
+                            <name>I click {"xpath":"//button[@data-type=\"page_header\"]"}</name>
+                            <title>I click {"xpath":"//button[@data-type=\"page_header\"]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1615961212752' status='passed' stop='1615961217754'>
+                            <name>I wait 5</name>
+                            <title>I wait 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1615961217760' status='failed' stop='1615961218700'>
+                    <name>And I filling the form with parameters </name>
+                    <title>And I filling the form with parameters </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1615961217760' status='passed' stop='1615961218105'>
+                            <name>I fill field {"id":"signup-payed-email"}, "mail@node.com"</name>
+                            <title>I fill field {"id":"signup-payed-email"}, "mail@node.com"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1615961218106' status='passed' stop='1615961218395'>
+                            <name>I fill field {"id":"signup-payed-full_name"}, "dave nate"</name>
+                            <title>I fill field {"id":"signup-payed-full_name"}, "dave nate"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1615961218395' status='passed' stop='1615961218689'>
+                            <name>I fill field {"id":"signup-payed-company"}, "nate inc"</name>
+                            <title>I fill field {"id":"signup-payed-company"}, "nate inc"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1615961218689' status='failed' stop='1615961218699'>
+                            <name>I fill field {"id":"signup-payed-phone"}, "899922233344"</name>
+                            <title>I fill field {"id":"signup-payed-phone"}, "899922233344"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='88e029ff-533c-4397-b733-9d2b80958cd6-attachment.png' type='image/png' size='125154'/>
+            </attachments>
+            <failure>
+                <message>Field "{"id":"signup-payed-phone"}" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Field "{"id":"signup-payed-phone"}" was not found by text|CSS|XPath
+                    at new ElementNotFound (/Users/paveldovgan/Desktop/octo-dev/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:14:11)
+                    at assertElementExists (/Users/paveldovgan/Desktop/octo-dev/node_modules/codeceptjs/lib/helper/Playwright.js:2423:11)
+                    at Playwright.fillField (/Users/paveldovgan/Desktop/octo-dev/node_modules/codeceptjs/lib/helper/Playwright.js:1202:5)
+                    at async /Users/paveldovgan/Desktop/octo-dev/e2e/pages/BasePage.js:50:3
+                    at async runSteps (/Users/paveldovgan/Desktop/octo-dev/node_modules/codeceptjs/lib/interfaces/gherkin.js:57:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
