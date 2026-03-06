@@ -30,8 +30,6 @@ const KEYBOARD = {
 
 Given(/^I on the main page$/, async () => {
   await I.amOnPage('ru');
-  await I.wait(ClockUnit.DEFAULT_TIMEOUT);
-  await I.click(SELECTORS.COOKIE_BUTTON);
 });
 
 When(/^I click on the sign up button$/, async () => {

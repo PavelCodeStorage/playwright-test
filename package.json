@@ -13,16 +13,16 @@
     "e2e:test-and-report": "yarn e2e:test ; yarn report:open"
   },
   "dependencies": {
-    "codeceptjs": "^3.0.4",
     "base-64": "^0.1.0",
+    "codeceptjs": "^3.7.6",
     "expect": "^26.6.2"
   },
   "devDependencies": {
-    "jest": "^26.1.0",
-    "playwright": "^1.6.2",
     "eslint": "^7.4.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-codeceptjs": "^1.3.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.1.0",
+    "playwright": "^1.58.2"
   }
 }

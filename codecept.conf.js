@@ -3,9 +3,10 @@ exports.config = {
   helpers: {
     Playwright: {
       url: 'https://appfollow.io/',
-      show: true,
       browser: 'chromium',
+      headless: true,
       waitForNavigation: 'domcontentloaded',
+
     },
   },
   jest: {},

@@ -1,34 +1,12 @@
-image: maven:3.9.4-eclipse-temurin-21-alpine
+image: node:18
 
 stages:
-  - build
-  - verify
+  - test
 
-variables:
-  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-
-cache:
-  key: maven
-  paths:
-    - .m2/repository
-
-before_script:
-  - echo "Using Java:"
-  - java -version
-  - mvn -version
-
-build:
-  stage: build
+test:
+  stage: test
   script:
-    - mvn clean compile
-
-verify:
-  stage: verify
-  script:
-    - java -version
-    - mvn verify
-
-  artifacts:
-    when: always
-    paths:
-      - target
+    - echo "Running Playwright and CodeceptJS tests"
+    - npm install
+    - npx playwright install --with-deps
+    - npm run e2e:test

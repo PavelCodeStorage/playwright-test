@@ -1,5 +1,4 @@
 
-https://github.com/eripley
 
 ## 🔷 FYI
 - Type :
