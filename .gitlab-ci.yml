@@ -10,3 +10,8 @@ test:
     - npm install
     - npx playwright install --with-deps
     - npm run e2e:test
+
+  artifacts:
+  when: always
+  paths:
+    - target/jmeter/reports
