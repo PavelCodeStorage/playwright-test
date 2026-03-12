@@ -1,0 +1,30 @@
+name: E2E Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - run: npm install
+
+      - run: npx playwright install --with-deps
+
+      - name: Get tag and run tests
+        run: |
+          TAG=$(curl -s -X POST http://localhost:3000/resolve \
+            -H "Content-Type: application/json" \
+            -d '{}' | jq -r '.excludeTags[0]')
+
+          npm run e2e:test -- --tags "not $TAG"
